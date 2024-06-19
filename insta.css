@@ -1,0 +1,102 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+   }
+   .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+   }
+   .logo img {
+    width: 100px;
+    height: 100px;
+   }
+   .search-bar {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+   }
+   .search-bar input {
+    border: 1px solid #ccc;
+    padding: 5px;
+    border-radius: 3px;
+    width: 200px;
+   }
+   .search-bar button {
+    background-color: #1da1f2;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+   }
+   .user-profile img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+   }
+   .nav-items {
+    display: flex;
+    align-items: center;
+   }
+   .nav-items a {
+    color: #1da1f2;
+    margin-left: 20px;
+   }
+   .posts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+   }
+   .post {
+    width: 300px;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+   }
+   .post-header {
+    display: flex;
+    align-items: center;
+   }
+   .post-header .username {
+    margin-left: 10px;
+   }
+   .post-image img {
+    width: 100%;
+    height: auto;
+   }
+   .post-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+   }
+   .like-button, .comment-button, .share-button {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+   }
+   .like-button i, .comment-button i, .share-button i {
+    margin-right: 5px;
+   }
+   .post-likes {
+    margin-top: 10px;
+   }
+   .post-caption {
+    margin-top: 10px;
+   }
+   .post-comments {
+    margin-top: 10px;
+   }
+   .write-comment {
+    margin-top: 10px;
+   }
+   .write-comment input {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+   }

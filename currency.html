@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>currency</title>
+        
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                document.querySelector('form').onsubmit = function() {
+                    fetch('https://v6.exchangerate-api.com/v6/4fb0e8fa08d479c0c23633b6/latest/USD') // find yours by searching v6 currency exchange api on google
+                .then(response => response.json())
+                    .then(data => {
+                        const currency = document.querySelector('#currency').value.toUpperCase();
+                      const rate = data.conversion_rates[currency]; // only for v6 api's.
+                      if (rate !== undefined) {
+                        document.querySelector('#result').innerHTML = `1 USD is ${rate.toFixed(3)} ${currency}.`; // to fixed = only show 3 numbers(here).
+                        document.querySelector('#result').classList.add('currency-result');
+                      } else {
+                        document.querySelector('#result').innerHTML = 'Invalid Currency. Please cross-check.';
+                      }
+                    
+                    })
+                    .catch(error => {
+                        console.log("Error: ", error);
+                    });
+                    
+                    return false;
+                }
+               
+                });
+           
+        </script>
+    </head>
+    <body>
+        <h1>Currency Converter</h1>
+        <h3 style="color: rgb(19, 19, 19);">Please enter a currency to convert it.</h3>
+     <form style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; padding-left: 0px;">
+        <input style="border-style: double; border-color: rgb(0, 0, 0); border-radius: 30px;" id="currency" placeholder="Currency" type="text">
+        <input style="border-radius: 50px; justify-content: center; border-style: double; border-color: rgb(0, 0, 0);" type="submit" value="Convert">
+        <div id="result" style="font-size: 18px; color: #000000; font-weight: bold; margin-top: 10px; font-family: 'Times New Roman', Times, serif; font-weight: bolder;">
+        </div>
+
+
+
+
+
+
+
+
+
+
+        
+             
+     </form>
+     <div id="result">
+     </div>
+    </body>
+    </html>
